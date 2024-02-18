@@ -1,5 +1,6 @@
 from rest_framework import serializers
 from django.contrib.auth.models import User
+from .models import Note, SharedNote
 
 
 class UserSerializer(serializers.ModelSerializer):
@@ -17,3 +18,15 @@ class UserSerializer(serializers.ModelSerializer):
 class LoginSerializer(serializers.Serializer):
     username = serializers.CharField()
     password = serializers.CharField()
+
+
+class NoteSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = Note
+        fields = '__all__'
+
+
+class SharedNoteSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = SharedNote
+        fields = '__all__'
