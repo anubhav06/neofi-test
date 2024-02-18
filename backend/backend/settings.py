@@ -25,7 +25,11 @@ SECRET_KEY = 'django-insecure-&sdp&=vk1cw!gz$3q(g2=oyvfq1!^$4*ieneqp-#+*$sm$7rys
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['*']
+ALLOWED_HOSTS = [
+    'http://127.0.0.1:8000',
+    'http://localhost:3000'
+    'https://neofi-test-production.up.railway.app'
+]
 
 
 CSRF_TRUSTED_ORIGINS = [
